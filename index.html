@@ -3,18 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Survey Form</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <title>Survey Form</title> 
+      <link rel="stylesheet" href="css/style.css"> 
 </head>
 
 <body>
 
-  <!-- By Robert Colema 8/14/2018 -->
+  <!-- By Robert Coleman 8/14/2018 -->
 
  <!-- Import fonts from Google-->
 <link href="https://fonts.googleapis.com/css?family=Amatic SC " rel="stylesheet" type="text/css">
@@ -26,19 +21,82 @@
     <div class="Des">
       <p id="description">This is an example of a survey form.</p>
     </div>
+   
     <!-- Form for the survey!-->
     <div class="FORM">
       <form id="survey-form">
         <!-- User Name -->
-        <p><label id="name-label">Name:</label><input id="name" type="text" name="name"  style="margin-left:0.5em" required></p>
+        <div id="">
+        <p><label id="name-label">Name:</label><input id="name" type="text" name="name"   size="35"style="margin-left:0.5em" required  placeholder="Enter your first and last name"></p>
 	      <!-- Email -->
         <p><label id="email-label">Email:</label><input id="email" type="email" name="email" size="35" style="margin-left:0.5em" required placeholder="Enter a valid email address"></p>
          <!-- Number input = Age -->
          <p><label id="number-label">Age:</label><input id="number" type="number" name="age"  size="5" style="margin-left:0.5em" required></p>
+         <!--Gender Selection!-->
+          <p><label id="gender-label">Gender:</label>
+          <SELECT id="dropdown">
+          <OPTION Value="Male">Male</OPTION>
+          <OPTION Value="Female">Female</OPTION>
+          </SELECT></p> 
+        </div>
         
-        <!-- Testing data inputs -->
-        <input type="submit" value="Submit">
+        <!-- Survey Data -->
+        <div id="thesurvey">
+          <p>Do you consider yourself a couch potato?</p>
+          <p>
+            <input type="radio" name="question" value="yes"required> Yes</input>
+            <input type="radio" name="question" value="no"required> No</input>
+          </p>
+          <p> 0 to 10 how you will grade your work ethic.</p>
+          <p>
+             <SELECT>
+             <OPTION>0</OPTION>
+             <OPTION>1</OPTION>
+             <OPTION>2</OPTION>
+             <OPTION>3</OPTION>
+             <OPTION>4</OPTION>
+             <OPTION>5</OPTION>
+             <OPTION>6</OPTION>
+             <OPTION>7</OPTION>
+             <OPTION>8</OPTION>
+             <OPTION>9</OPTION>
+             <OPTION>10</OPTION>
+             </SELECT>
+          </p>
+          <p>How much on gas you spend on a week</p>
+           <p>
+            <input type="radio" name="question3" value="0to10"  required> less than 10 bucks</input>
+            <input type="radio" name="question3" value="0to10"  required> less than 25 bucks</input>
+            <input type="radio" name="question3" value="0to10"  required> less over 50 bucks</input>
+            <input type="radio" name="question3" value="0to10"  required> over 100 bucks</input>
+           </p>
+          <p>Type of transportation used for commuting</p>
+           <p>
+            <input type="radio" name="question4" value="moving"  required> Own vehicle</input>
+            <input type="radio" name="question4" value="moving"  required> Public transportation</input>
+            <input type="radio" name="question4" value="moving"  required> Car pool</input>
+            <input type="radio" name="question4" value="moving"  required> Other</input>
+           </p>
+          <p>what interests you (check all that apply to you)</p>
+            <p>
+              <input type="checkbox" value="interests"> I like traveling</input> <input type="checkbox" value="interests" style="margin-left:2.9em"> I have a bike</input>
+            </p>
+            <p>
+              <input type="checkbox" value="interests"> I hate the gym</input> <input type="checkbox" value="interests" style="margin-left:2.9em"> I go to the gym</input>
+            </p>
+            <p>
+              <input type="checkbox" value="interests"> Love cats</input> <input type="checkbox"  value="interests" style="margin-left:2.9em"> Love dogs</input>
+            </p>
+        <!-- Text area for survey taker comments -->
+        <p>Any comments you will like to ad about this survey?</p>
+            <p><textarea rows="5" cols="50" required></textarea></p>
+        </div>
         
+        <div id="thesub">
+        <!-- Input data to be submit from the form -->
+        <button class="btn" id="submit">Submit</button>
+        </div>
+          
       </form>
     </div>
   </div>
@@ -47,8 +105,5 @@
   </div>
 </div>
   
-  
-
 </body>
-
 </html>
