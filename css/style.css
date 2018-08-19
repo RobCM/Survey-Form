@@ -57,7 +57,7 @@ background-size: 100px 100px;
     grid-gap: 10px;
     grid-template-areas:
       "header header"
-      "advert content"
+      "content content"
       "footer footer";
   }
 h1{
@@ -75,4 +75,33 @@ h6{
   color: Gray;
   margin: center;
   padding-left: 5em;
+}
+/* Button looks*/
+.btn {
+     background-color: #ab2406; 
+     border: none;
+     padding: 9px 5px;
+     color: White;
+     font-size: 17px;
+  /* Object shadow*/
+  box-shadow: 0 9px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/* In order to place divs nest to each other using flexbox*/
+#survey-form {
+  display: flex;
+  flex-wrap: wrap; 
+  align-content: flex-start;
+}
+#thesurvey {
+  padding-left: 1.5em;
+  flex: 1;
+  border-style: none;
+  background: #f5dead;
+  border-radius: 10px 100px / 22px;
+  /* Object shadow*/
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#thesub {
+   width: 100%; 
+   padding-left: 1em;
 }
